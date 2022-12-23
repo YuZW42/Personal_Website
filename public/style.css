@@ -18,3 +18,44 @@ body{
 
 }
 
+.container{
+  padding: 10px 10%;
+
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+
+.logo{
+  width:140 px
+}
+
+#navbar ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+#navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position:relative;
+}
+
+nav ul li a::after{
+  content: '';
+  width:0%;
+  height: 3px;  
+  background: blueviolet;
+  position: absolute;
+  left:0;
+  bottom:-6px;
+}
+
+nav ul li a:hover::after{
+  width:100%;
+}
