@@ -18,14 +18,87 @@
             </ul>
         </nav>
         <div class="header-text">
-          <p>Software Programmar</p>
-          <h1>My name is William and welcome to my website</h1>
-          <div>          
-            <img src="goldengatePP.jpeg" alt="4" style="width: 175px;height:375px;">
-         </div>
+          <p>Software Programmar</p> 
+          <h1>My name is <span>William </span><br> Welcome to my website</h1>
+        </div>
+        <div class="profile-pic">          
+          <img src="photos/goldengatePP.jpeg" alt="profile-pic" 
+          style="width: 250px;height:475px;"  >
+       </div>       
+      </div>
+      </div>
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="photos/PP1.jpeg" alt=" "
+              style="width: 400px;height:325px;"  >
+            </div>
+            <!-----about------->
+            <div class="about-col-2">
+              <h1 class="sub-title"> About Me</h1>
+              <p> </p>
+
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li> <span>Java</span> <br> Algorithm and data structure</li>
+                  <li> <span>Html, CSS and Javascript</span> <br> 
+                  Website building using <b>React</b>
+                  </li>
+                  <li> <span>Ocaml</span> <br> 
+                    Utilize the functional language to created an interpreter 
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li> <span>Coding Instructor - Santa Clara, CA</span> <br> 
+                    Taught machine learning, web design, mobile app to students aged 8-16.
+                    Collaborated with three different co-instructors to coordinate materials.
+                  </li>
+                  <li> <span>Data Department Analyzer - Boston, MA</span> <br> 
+                    Part of a Boston Univeristy's club.<br>
+                    Analyzed traffic, using excel and Python to provid feedback to E-Board.
+                    Designed proposals for events such as basketball tournament using data for references.
+                    
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-contents" id="education" >
+                <ul>
+                  <li> <span>Boston University</span> <br> Computer Science, Class of 2025</li>
+                  <li> <span>Irvington High School</span> <br> 
+                  Dual enrollment with Ohlone College, Class of 2021
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
-      </div>
+
+      <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+          for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+  
+          }
+          for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+  
+          }
+        }
+      </script>
 
   </body>
 </html>
