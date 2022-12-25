@@ -3,6 +3,7 @@
   <head>
     <title> Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="header">
@@ -11,7 +12,7 @@
             <img src="" class="logo">
             <ul> 
               <li><a href="#"> Home</a> </li>
-              <li><a href="#"> Networks</a> </li>
+              <li><a href="#"> Experience</a> </li>
               <li><a href="#"> Portfolio</a> </li>
               <li><a href="#"> Contact</a> </li>
               <li><a href="#"> About</a> </li>
@@ -84,7 +85,34 @@
           </div>
         </div>
       </div>
-
+<!-----services-->
+<div id="service">
+  <div class="container">
+    <h1 class="sub-title"> My Experience </h1>
+    <div class="services-list">
+      <div>
+        <i class="fas fa-crop-alt"></i>
+        <h2> My Own Website</h2>
+        <p> </p>
+        <a href="#">learn more</a>
+      </div>
+      <div class=>
+        <i class="fas fa-code"></i>
+        <h2>InfoShare</h2>
+        <p> </p>
+        <a href="https://github.com/SciencePotato/augusthackathon2022">
+          Link to the GitHub Project</a>
+        </div>
+        <!------
+        <div>
+        <i class="fas fa-code-branch"></i>
+        <h2>Web Design</h2>
+        <p> </p>
+        <a href="#">learn more</a>
+      </div> --->
+    </div>
+  </div>
+</div>
       <script>
         var tablinks=document.getElementsByClassName("tab-links");
         var tabcontents=document.getElementsByClassName("tab-contents");
@@ -97,6 +125,8 @@
             tabcontent.classList.remove("active-tab");
   
           }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
         }
       </script>
 
