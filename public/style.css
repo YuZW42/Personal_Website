@@ -4,7 +4,9 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
-
+html{
+  scroll-behavior:smooth;
+}
 body{
   background: #080808;
   color:#fff
@@ -211,7 +213,121 @@ nav ul li a:hover::after{
 
 .services-list div:hover{
   background: crimson;
-  transform: translateY(-10px);
+  transform: translateX(10px);
 
 }
 
+/*-----portfolio
+#portfolio{
+  
+} */
+
+/*------------contact-----*/
+.contact-left{
+  flex-basis: 35%;
+
+}
+
+.contact-right{
+  flex-basis: 60%;
+}
+
+.contact-left p{
+  margin-top:30px;
+}
+
+.btn{
+  display:block;
+  margin:40px;
+  width:fit-content;
+  border:2px solid fuchsia;
+  padding:15px 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: wheat;
+  transition:background 0.5s;
+  display:inline-block;
+  background:lightseagreen;
+  margin-left: 0;
+}
+
+.btn:hover{
+  background: skyblue;
+}
+
+.contact-right form{
+  width:100;
+}
+
+form input, form textarea{
+  width:100%;
+  border:0;
+  outline:none;
+  background:gray;
+  padding:15px;
+  margin: 15px 0;
+  color:black;
+  font-size:20px;
+  border-radius: 10px;
+}
+
+form .btn{
+  padding:14px 60px;
+  font-size:18px;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+.copyright{
+  width:100%;
+  text-align: center;
+  padding:25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top:20px;
+}
+
+
+/* --------css for small screen---*/
+
+@media only screen and (max-width:600px){
+  .header-text{
+    margin-top:100%;
+    font-size:16px;
+  }
+  .header-text h1{
+    font-size:30px;
+  }
+  .sub-title{
+    font-size:40px;
+    }
+  .about-col-1, .about-col-2{
+    flex-basis:100%;
+  }
+  .about-col-1{
+    margin-bottom: 30px;
+  }
+  .about-col-2{
+    font-size:14px;
+  }
+  .tab-links{
+    font-size:16px;
+    margin-right:20px;
+
+  }
+
+  .contact-left, .contact-right{
+    flex-basis:100%;
+  }
+
+  .copyright{
+    font-size:14px;
+  }
+
+}
+
+#msg{
+  color:#61b752;
+  margin-top:-40px;
+  display:block;
+}

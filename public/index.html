@@ -11,11 +11,12 @@
         <nav id="navbar"> 
             <img src="" class="logo">
             <ul> 
-              <li><a href="#"> Home</a> </li>
-              <li><a href="#"> Experience</a> </li>
-              <li><a href="#"> Portfolio</a> </li>
-              <li><a href="#"> Contact</a> </li>
-              <li><a href="#"> About</a> </li>
+              <li><a href="#header"> Home</a> </li>
+              <li><a href="#about"> About</a> </li>
+              <li><a href="#experience2"> Experience</a> </li>
+              <!--- <li><a href="#"> Social Networks</a> </li> --->
+              <li><a href="#contact"> Contact</a> </li>
+              
             </ul>
         </nav>
         <div class="header-text">
@@ -85,10 +86,10 @@
           </div>
         </div>
       </div>
-<!-----services-->
-<div id="service">
+<!-----experience-->
+<div id="experience">
   <div class="container">
-    <h1 class="sub-title"> My Experience </h1>
+    <h1 class="sub-title" id="experience2"> My Experience </h1>
     <div class="services-list">
       <div>
         <i class="fas fa-crop-alt"></i>
@@ -100,7 +101,7 @@
         <i class="fas fa-code"></i>
         <h2>InfoShare</h2>
         <p> </p>
-        <a href="https://github.com/SciencePotato/augusthackathon2022">
+        <a href="https://github.com/SciencePotato/augusthackathon2022" target="_blank">
           Link to the GitHub Project</a>
         </div>
         <!------
@@ -111,6 +112,48 @@
         <a href="#">learn more</a>
       </div> --->
     </div>
+  </div>
+</div>
+
+<!---portfolio 
+<div id="portfolio">
+  <div class="container">
+    <div class="sub-title">
+
+    </div>
+  </div>
+</div> --->
+
+<!---Contact--->
+<div id="contact">
+  <div class="container">
+      <div class="row">
+        <div class="contact-left">
+        <h1 class="sub-title"> Contact me </h1>
+        <p>zengy2003@gmail.com</p>
+        <p>971-720-7098</p> <br>
+        <a href="https://github.com/YuZW42" target="_blank">GitHub</a><br><br>
+        <a href="https://www.linkedin.com/in/yu-zeng-08829a213/" target="_blank">LinkedIn</a><br>
+        <a href="photos/Resume Dec Update.pdf" download class="btn"> Download CV <br>(Last Updated December 25)</a>
+      </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="4" placeholder="Tell me anything" required>
+            </textarea>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        <span id="msg"></span>
+        </div>
+      </div>
+  </div>
+  <div class="copyright">
+    <p>This website is built with the help of
+      <a href="https://www.youtube.com/watch?v=0YFrGy_mzjY&t=615s&ab_channel=EasyTutorials" target="_blank">
+        Easy Tutorial
+      </a>
+    </p>
   </div>
 </div>
       <script>
@@ -129,6 +172,23 @@
           document.getElementById(tabname).classList.add("active-tab");
         }
       </script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbz0Qv0rwErCwLmaMCdX1elkpDIXfuKFq0z75HsrrSrSvlEYWI0zyk07hcP_vSexEBzdsg/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
 
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response =>
+       {msg.innerHTML = "Message sent sucessfully"
+        setTimeout(function(){
+      msg.innerHTML = ""
+    },5000)
+    form.reset()
+    })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
   </body>
 </html>
